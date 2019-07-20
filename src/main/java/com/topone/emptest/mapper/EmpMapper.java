@@ -2,6 +2,7 @@ package com.topone.emptest.mapper;
 
 import com.topone.emptest.domain.Emp;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +15,7 @@ public interface EmpMapper {
     //删除
     @Delete("DELETE FROM newemp WHERE empno=#{id}")
     public int  deletid(@Param("id") int id);
+
+    @Insert("insert into emp (empno,ename,job) values(#{empno},#{ename},#{job})")
+    public int add();
 }

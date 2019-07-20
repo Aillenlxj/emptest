@@ -20,4 +20,8 @@ public class EmpService implements EmpMapper {
     public int deletid(int id) {
         return empMapper.deletid(id);
     }
+
+    public  int add(){
+      return   empMapper.add();
+    }
 }

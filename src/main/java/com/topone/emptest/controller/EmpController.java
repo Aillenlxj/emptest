@@ -29,4 +29,11 @@ public class EmpController {
      public int deletid(@RequestParam("id") int id) {
         return empService.deletid(id);
     }
+
+    //添加
+    @RequestMapping("add")
+    @ResponseBody
+    public int add(){
+        return empService.add();
+    }
 }
